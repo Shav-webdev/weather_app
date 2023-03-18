@@ -1,0 +1,9 @@
+@import "../../../assets/styles/theme-variables";
+
+.current-city-details {
+  text-align: left;
+  min-height: 200px;
+  @include themify($themes) {
+    color: themed('textColor');
+  }
+}

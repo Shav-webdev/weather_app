@@ -1,0 +1,168 @@
+@import "../../assets/styles/media";
+@import "../../assets/styles/theme-variables";
+
+.weather-cards-container {
+  padding-top: 20px;
+  margin-top: 30px;
+  @include themify($themes) {
+    border-top: themed('divider')
+  }
+
+  .city-details {
+    @include themify($themes) {
+      color: themed('textColor');
+    }
+    margin: 10px 0;
+    .city-name {
+      text-align: center;
+      margin-right: 20px;
+    }
+  }
+  .weather-cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 50px 0;
+    @include media('xs') {
+      justify-content: center;
+    }
+    @include media('sm') {
+      justify-content: center;
+    }
+    @include media('md') {
+      justify-content: space-between;
+    }
+    @include media('lg') {
+      justify-content: space-between;
+    }
+    @include media('xl') {
+      justify-content: space-between;
+    }
+    @include media('xll') {
+      justify-content: space-between;
+    }
+    @include media('xxl') {
+      justify-content: space-between;
+    }
+    .weather-card-item {
+      transition: all .3s;
+      height: 100%;
+      margin-bottom: 20px;
+      width: 250px;
+      @include media('xs') {
+        width: 300px;
+      }
+      @include media('sm') {
+        width: 275px;
+      }
+      @include media('md') {
+        width: 275px;
+      }
+      @include media('lg') {
+        width: 300px;
+      }
+      @include media('xl') {
+        width: 300px;
+      }
+      @include media('xll') {
+        width: 350px;
+      }
+      @include media('xxl') {
+        width: 270px;
+      }
+      .weather-card {
+        border: 1px solid #000000;
+        border-radius: 5px;
+        height: 280px;
+        margin-right: 15px;
+        padding: 10px 5px;
+        .weather-card-head {
+          color: #fff;
+          h3 {
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1;
+            @include media('xl') {
+              text-align: center;
+            }
+            @include media('xll') {
+              text-align: center;
+            }
+            @include media('xxl') {
+              text-align: center;
+            }
+          }
+          .icon-wrapper {
+            width: 90px;
+            height: fit-content;
+            margin: 0 auto 20px;
+            svg {
+              @include themify($themes) {
+                fill: themed('iconFill');
+              }
+            }
+          }
+        }
+        .weather-card-body {
+          color: #fff;
+          font-size: 14px;
+          line-height: 1;
+          .space {
+            @include media('xl') {
+              text-align: center;
+            }
+            @include media('xll') {
+              text-align: center;
+            }
+            @include media('xxl') {
+              text-align: center;
+            }
+          }
+        }
+        .weather-card-footer {
+          color: #fff;
+          font-size: 14px;
+          line-height: 1;
+          .space {
+            @include media('xl') {
+              text-align: center;
+            }
+            @include media('xll') {
+              text-align: center;
+            }
+            @include media('xxl') {
+              text-align: center;
+            }
+          }
+        }
+        &.day {
+          background: url("../../assets/img/day.jpg") no-repeat center;
+          background-size: cover;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          .weather-card-head {
+            color: #25251a;
+          }
+          .weather-card-body {
+            color: #25251a;
+          }
+          .weather-card-footer {
+            color: #25251a;
+
+          }
+        }
+        &.night {
+          background: url("../../assets/img/night.jpg") no-repeat center;
+          background-size: cover;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+

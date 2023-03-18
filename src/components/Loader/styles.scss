@@ -1,0 +1,15 @@
+.loader {
+  position: relative;
+  .loaderIcon {
+    position: absolute;
+    display: block;
+    margin: auto;
+    background: transparent;
+    width: 75px;
+    height: 75px;
+    top: 100px;
+    left: 50%;
+  }
+}
+
+
