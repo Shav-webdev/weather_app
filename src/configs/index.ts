@@ -1,3 +1,0 @@
-export const CONFIG = {
-  WEATHER_API_KEY: '7b3987fa257415b07e8178563d44583c',
-};
