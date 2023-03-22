@@ -24,4 +24,8 @@ export default class WeatherApi {
     const api = new Api('data/2.5/climate');
     return api.get('', { params });
   }
+  // static getWeatherHistoryByCityCoords(params: IHistoricalWeatherRequest) {
+  //   const api = new Api('data/2.5/climate');
+  //   return api.get('', { params });
+  // }
 }

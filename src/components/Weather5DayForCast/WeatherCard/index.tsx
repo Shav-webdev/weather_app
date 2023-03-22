@@ -4,6 +4,7 @@ import { DATE_FORMATS } from 'helpers/constants';
 import useTemperature from 'hooks/useTemperature';
 import { I5dayForeCastListItem } from 'helpers/global.types';
 import { SunIcon, RainIcon, CloudsIcon, MoonIcon } from 'assets/icons';
+import WeatherIcon from './WeatherIcon';
 
 export type WeatherCardProps = {
   item: {
@@ -37,7 +38,9 @@ const WeatherCard = ({ item }: WeatherCardProps) => {
               </strong>
             </h3>
           )}
-          <div className={'icon-wrapper'}>{weatherIcon(item.d)}</div>
+          <div className={'icon-wrapper'}>
+            <WeatherIcon iconCode={item.d?.weather[0]?.icon} />
+          </div>
         </div>
         <div className={'weather-card-body'}>
           {item.d?.main.temp && (
@@ -80,7 +83,9 @@ const WeatherCard = ({ item }: WeatherCardProps) => {
               {moment(item.n?.dt_txt).format(DATE_FORMATS.WEEKDAY_DATE)}
             </strong>
           </h3>
-          <div className={'icon-wrapper'}>{weatherIcon(item.n, true)}</div>
+          <div className={'icon-wrapper'}>
+            <WeatherIcon iconCode={item.n?.weather[0]?.icon} />
+          </div>
         </div>
         <div className={'weather-card-body'}>
           {item.n?.main.temp && (

@@ -14,21 +14,15 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    .logo-section {
-      height: 50px;
-      text-decoration: none;
-      display: flex;
-      width: 430px;
-      @include themify($themes) {
-        color: themed('textColor');
-      }
-      font-weight: 600;
-      text-transform: uppercase;
-      span {
-        display: inline-block;
-        font-size: 30px;
-        margin: auto;
-      }
+    padding: 0 100px;
+    justify-content: space-between;
+    @include media('xs') {
+      padding: 0 30px;
+    }
+    @include media('sm') {
+      padding: 0 30px;
+    }
+    @include media('md') {
     }
     .toggle-btn-section {
       .toggle-checkbox {

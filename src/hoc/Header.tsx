@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import './styles.scss';
-import TempToggle from 'components/TempToggle';
 import ThemeToggle from 'components/ThemeToggle';
+import TempSelect from 'components/TempSelect';
 
 const Header: FC = () => {
   return (
     <header className="header">
       <div className="header-content">
+        <TempSelect />
         <ThemeToggle />
-        <TempToggle />
       </div>
     </header>
   );

@@ -8,4 +8,10 @@ export enum DATE_FORMATS {
   DATE_AND_TIME = 'DD-MM-YYYY HH:mm',
 }
 
-export const KELVIN_TEMP = 273;
+export const KELVIN_TEMP = 273.15;
+
+export const MEASUREMENT_TYPES = {
+  KELVIN: 'kelvin',
+  CELSIUS: 'celsius',
+  FAHRENHEIT: 'fahrenheit',
+};
